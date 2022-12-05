@@ -4,6 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "begin:teste": "npx dotenv -e .env.test npx jest -- --forceExit",
+    "coverage": "npm run begin:teste -- --coverage",
     "prebuild": "rm -rf dist",
     "build": "ttsc -p tsconfig.build.json",
     "prepare": "husky install",
